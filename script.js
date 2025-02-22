@@ -40,14 +40,20 @@ let frases_do_dia = [
 if (dataAtual.getHours() >= 0 && dataAtual.getHours() < 12) {
     horaHTML.textContent = "BOM DIA!"
     document.querySelector("body").style.backgroundImage = "url(./lib/img/dia.jpg)";
+    document.querySelector("h1").style.color="black"
+    document.querySelector("h4").style.color="black"
 
 } else if (dataAtual.getHours() >= 12 && dataAtual.getHours() < 18) {
     horaHTML.textContent = "BOA TARDE!"
     document.querySelector("body").style.backgroundImage = "url(./lib/img/tarde.jpg)";
+    document.querySelector("h1").style.color="white"
+    document.querySelector("h4").style.color="white"
 
 } else if (dataAtual.getHours() >= 18 && dataAtual.getHours() <= 24){
     horaHTML.textContent = "BOA NOITE!"
     document.querySelector("body").style.backgroundImage = "url(./lib/img/noite.jpg)";
+    document.querySelector("h1").style.color="white"
+    document.querySelector("h4").style.color="white"
 }
 
 fraseHTML.textContent = frases_do_dia[dataAtual.getDay()];
